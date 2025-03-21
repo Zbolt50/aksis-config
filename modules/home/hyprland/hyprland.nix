@@ -1,4 +1,4 @@
-{ pkgs, home-manager, ... }:
+{ config, pkgs, home-manager, ... }:
 # Hyprland
 {
 
@@ -6,6 +6,7 @@
     enable = true; 
     xwayland.enable = true;
   };
+
   environment.systemPackages = with pkgs; [
      wofi                                                                                  
      waybar                                                                                

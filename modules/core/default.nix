@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./bootloader.nix
@@ -9,5 +9,21 @@
     ./pipewire.nix
     ./users.nix
   ];
+  environment.systemPackages = with pkgs; [
+    wget
+    efibootmgr
+    tree
+    # System Utils
+    pciutils
+    usbutils
+    ripgrep
+    qmk
+    #R # For PPL 
+    #rstudio # For PPL
+    cmatrix
+    cava
+    pavucontrol
+  ];
+  
 
 }
