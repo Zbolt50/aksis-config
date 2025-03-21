@@ -1,0 +1,14 @@
+{ host, ... }:
+# Intel System Config
+{
+  imports = [
+    ../../hosts/${host} 
+    ../../modules/core/default.nix
+  ];
+  # Potentially need to add drivers in the near future
+  #drivers.amdgpu.enable = false;
+  #drivers.nvidia.enable = false;
+  #drivers.nvidia-prime.enable = false;
+  #drivers.intel.enable = true;
+  #vm.guest-services.enable = false;
+}
