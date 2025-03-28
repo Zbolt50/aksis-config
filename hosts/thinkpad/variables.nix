@@ -2,6 +2,6 @@
 {
   browser = "firefox";
   terminal = "kitty";
-  fileBrowser = "dolphin";
+  fileBrowser = "thunar";
   windowManager = "hyprland";
 }

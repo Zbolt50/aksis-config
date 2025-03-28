@@ -4,8 +4,11 @@
         enable = true;
         defaultEditor = true;
         viAlias = true;
-        vimAlias = false;
+        vimAlias = true;
         vimdiffAlias = true;
-    }
-    # Plugin time
+    };
+    programs.neovim.plugins = [
+        pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+    ];
+    
 }

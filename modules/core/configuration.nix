@@ -3,7 +3,6 @@
   # System Defaults that will never change
   system.stateVersion = "24.11"; 
 
-
   # Set your time zone.
   time.timeZone = "America/New_York";
   # Select internationalisation properties.
@@ -18,5 +17,13 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
+  };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  # Auto clean old generations
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than-7d";
   };
 }

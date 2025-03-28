@@ -7,6 +7,8 @@
       enable = true; 
       efiSupport = true;
       device = "nodev";
+      # keep ten generations in bootloader
+      configurationLimit = 10;
     };
     efi = {
       canTouchEfiVariables = true; 

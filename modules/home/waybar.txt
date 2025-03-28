@@ -1,0 +1,60 @@
+{ host, pkgs, ... }:
+# NOTE: modularity can be achived using NIX if/else branching, ergo we can
+# specify waybar to output certain bars to certain places on connect/detection
+# One issue might be waybar needing updated upon monitor connect, but we will see, this might be handled with a script
+let
+  hostVars = import ../../hosts/${host}/variables.nix;
+  inherit (hostVars) terminal;
+in
+{
+	programs.waybar = {
+		enable = true;
+		# is this even needed?
+		package = pkgs.waybar;
+		settings = [
+			{
+				layer = "top";
+				position = "top";
+				modules-center = [
+				"cpu"
+				"memory"
+				"temperature"
+				];
+				modules-left = [
+				"hyprland/workspaces"
+				# Custom Arrow >
+				# Spacing
+				# Custom Arrow <
+				"tray"
+				# Custom Arrow >
+				];
+				modules-right = [
+				# Custom Arrow <
+				"clock"
+				];
+
+				# Module Customization
+				"battery" = {
+					states = {
+				              warning = 30;
+              				      critical = 15;
+            				};
+        				format = "{icon} {capacity}%";
+        				format-full = "{icon} {capacity}%";
+        				format-charging = "{capacity}% ";
+        				format-plugged = "{capacity}% ";
+        				format-icons = ["" "" "" "" ""];
+				};
+				# Module Customization
+				"clock" = {
+					format = ''{:%I:%M %p}'';  
+					format-alt = ''{:%a.%b %d | %I:%M %p}'';
+					tooltip = true;
+				        tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
+				};
+			}	
+		];
+	};
+
+}
+

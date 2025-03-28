@@ -8,6 +8,9 @@
     ./networking.nix
     ./pipewire.nix
     ./users.nix
+    #./sddm.nix
+    ./xserver.nix
+    ./services.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
@@ -16,6 +19,12 @@
     # System Utils
     pciutils
     usbutils
+    gparted 
+    btop
+    # Bluetooth
+    bluetui
+    bluez
+    # Other stuff
     ripgrep
     qmk
     #R # For PPL 
@@ -23,6 +32,8 @@
     cmatrix
     cava
     pavucontrol
+    zip
+    unzip
   ];
   
 

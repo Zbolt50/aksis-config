@@ -1,28 +1,31 @@
-{ inputs, host, username, hostVars, ... }:
+{ inputs, host, username, ... }:
 let
-  #inherit (import ../../hosts/${host}/variables.nix) terminal fileBrowser windowManager;
+  hostVars = import ../../hosts/${host}/variables.nix;
   inherit (hostVars) browser terminal fileBrowser windowManager;
 in
 {
   imports = [
     ./${terminal}.nix 
-    ./${windowManager}/${windowManager}.nix
+    # Make this import folder with a default.nix inside each one
+    #./${windowManager}/${windowManager}.nix
+    ./${windowManager}
+    # Home-manager the filebrowser stuff
     ./${fileBrowser}.nix
     ./${browser}.nix
     ./zsh/zsh.nix
     ./dotfiles.nix
 
     # TODO: MAKE NEOVIM NIX AGAIN
-    ./editors
-
+    ./editors/neovim/neovim.nix
     # TODO: send programs to seperate folder to be sourced
     ./git.nix
-    ./fastfetch.nix
+    ./fastfetch
     ./tmux.nix
-    # Remove this and home-manager stops working
-    ./home.nix
+    ./fzf.nix
+    ./wofi.nix
+    ./waybar.nix
+    ./zathura.nix
+    ./gtk/gtk.nix
+
   ];
-
-
-
 }

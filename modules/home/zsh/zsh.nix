@@ -1,39 +1,37 @@
-{ pkgs, lib, ... }
+{ config, pkgs, lib, ... }:
+
 {
     # bash but awesome
+    # home.packages = with pkgs; [ zsh-powerlevel10k ];
+    #environment.etc."powerlevel10k/p10k.zsh".source = ./p10k.zsh;
+
     programs.zsh = {
         enable = true;
+	enableCompletion = true;
         autosuggestion.enable = true;
-        #autocompletion?
         syntaxHighlighting.enable = true;
+	# TODO: fix this so itll source .p10k.zsh from this folder
+	initExtraFirst = "source ~/.p10k.zsh";
+	#histSize = 10000;
         oh-my-zsh = {
             enable = true;
             plugins = [
                 "zsh-interactive-cd"  
             ];
-        }
-        # This only exists because p10k is difficult
-        plugins = [
-            {
-                name = "powerlevel10k";
-                src = pkgs.zsh-powerlevel10k;
-                file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-            }
-            {
-                name = "powerlevel10k-config";
-                src = lib.cleanSource ./p10k.zsh;
-                file = "p10k.zsh";
-            }
-
-        ];
-
+        };
+	plugins = [
+	  {                                                                                  
+    		name = "powerlevel10k";                                                       
+    		src = pkgs.zsh-powerlevel10k;                                                 
+    		file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";                     
+  	  }
+	];
         shellAliases = {
+	    ls = "ls --color=auto";
             ll = "ls -l";
             la = "ls -a";
-            #update = "sudo nixos-rebuild switch";
-            flake-update = "sudo nixos-rebuild switch --flake .";
             ff = "fastfetch";
-            nixdev = "nix develop";
+            nixdev = "nix develop -c $SHELL";
         };
     };
 }
