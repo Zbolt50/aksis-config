@@ -6,9 +6,20 @@
         viAlias = true;
         vimAlias = true;
         vimdiffAlias = true;
+
+	plugins = with pkgs; [
+        	pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+	];
+
+	extraPackages = with pkgs;  [
+		lua-language-server
+		stylua
+		ripgrep
+		fzf
+	];
     };
-    programs.neovim.plugins = [
-        pkgs.vimPlugins.nvim-treesitter.withAllGrammars
-    ];
-    
+    home.file.".config/nvim" = {
+		source = ./plugins/nvim;
+		recursive = true;
+    };
 }

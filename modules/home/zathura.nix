@@ -3,6 +3,11 @@
 {
     programs.zathura = {
         enable = true;
-        # Add configs later
+        options = {
+            default-bg = "#101010";
+            default-fg = "#FFFFFF";
+            font = "JetBrainsMono Nerd Font";
+            selection-clipboard = "clipboard";
+        };
     };
 }

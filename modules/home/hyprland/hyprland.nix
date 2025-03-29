@@ -25,8 +25,10 @@
 	env = [
 	"NIXOS_OZONE_1L, 1"
 	"AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
-    "HYPRCURSOR_THEME,MyCursor"
-    "HYPRCURSOR_SIZE,22"
+    # Make this source this from somewhere else later for
+    # ultimate modularity
+    	"HYPRCURSOR_THEME,Bibata-Modern-Ice"
+    	"HYPRCURSOR_SIZE,22"
    	];
 
 	gestures = {

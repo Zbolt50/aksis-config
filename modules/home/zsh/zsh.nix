@@ -2,7 +2,7 @@
 
 {
     # bash but awesome
-    # home.packages = with pkgs; [ zsh-powerlevel10k ];
+    home.packages = with pkgs; [ thefuck ];
     #environment.etc."powerlevel10k/p10k.zsh".source = ./p10k.zsh;
 
     programs.zsh = {
@@ -11,12 +11,15 @@
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
 	# TODO: fix this so itll source .p10k.zsh from this folder
+	# Make a home.file from this folder
 	initExtraFirst = "source ~/.p10k.zsh";
 	#histSize = 10000;
         oh-my-zsh = {
             enable = true;
             plugins = [
                 "zsh-interactive-cd"  
+		"git"
+		"thefuck"
             ];
         };
 	plugins = [

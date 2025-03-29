@@ -41,16 +41,16 @@
             keyColor = "red";
             outputColor = "white";
           }
-		  "break"
-		  {
-			type = "wm";
-			key = "WM ";
-			keyColor = "white";
+	  "break"
+	  {
+            type = "wm";
+            key = "WM ";
+            keyColor = "white";
             outputColor = "red";
-		  }
-		  {
-			type= "cursor";
-			key = " ├ 󰆿"; 
+	  }
+	  {
+            type= "cursor";
+		key = " ├ 󰆿 "; 
 			keyColor = "white";
             outputColor = "red";
 		  }
