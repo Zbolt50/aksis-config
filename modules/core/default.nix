@@ -12,7 +12,9 @@
     ./xserver.nix
     ./services.nix
     ./virtualization.nix
+    ./kanata.nix
   ];
+  # Default systemPackages that everyone and their mother needs
   environment.systemPackages = with pkgs; [
     wget
     efibootmgr
@@ -32,8 +34,7 @@
     #R # For PPL 
     #rstudio # For PPL
     cmatrix
-    cava
-    pavucontrol
+    pipes
     zip
     unzip
     lftp

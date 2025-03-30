@@ -19,11 +19,9 @@
   ... 
   } @inputs: let
     system = "x86_64-linux";
-    host  = "thinkpad";
     username = "boggle"; 
     hostname = "aksis"; 
     lib = nixpkgs.lib;
-
   in {
 
     nixosConfigurations = {
@@ -33,7 +31,8 @@
         specialArgs = {
           inherit inputs; 
           inherit username; 
-          inherit host; 
+          host  = "thinkpad";
+          # Change host name based on system being built?
           inherit hostname;
           #inherit hostVars;
         };

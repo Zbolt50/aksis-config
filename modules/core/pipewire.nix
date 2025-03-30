@@ -12,4 +12,9 @@
     #jack.enable = true;
     #media-session.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    cava
+    pavucontrol
+  ];
 }

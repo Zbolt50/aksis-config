@@ -19,7 +19,7 @@
 		bind h split-window -v
 		unbind %
 		unbind '"'
-		
+        set -g default-terminal screen-256color		
 		# Source Plugins
 		source-file ~/.config/tmux/plugins/vim-tmux-navigator.conf
 		# Fix prefix-highlight
