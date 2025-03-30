@@ -12,8 +12,14 @@
 	];
 
 	extraPackages = with pkgs;  [
+        # Lua 
 		lua-language-server
+        luarocks
 		stylua
+        # Nix
+        nil
+        nixfmt-rfc-style
+        # Neovim dependencies
 		ripgrep
 		fzf
 	];

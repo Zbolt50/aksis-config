@@ -5,5 +5,6 @@
 		xfce.thunar-volman
 		xfce.thunar-archive-plugin
 		xfce.thunar-media-tags-plugin
+        kdePackages.ark
 	];
 }

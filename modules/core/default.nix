@@ -11,6 +11,7 @@
     #./sddm.nix
     ./xserver.nix
     ./services.nix
+    ./virtualization.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
@@ -19,6 +20,7 @@
     # System Utils
     pciutils
     usbutils
+    inetutils
     gparted 
     btop
     # Bluetooth
@@ -34,6 +36,10 @@
     pavucontrol
     zip
     unzip
+    lftp
+    # Communication/Email - will migrate to diff folder soon
+    vesktop
+    thunderbird
   ];
   
 

@@ -32,5 +32,5 @@ return {
 				capabilities = capabilities,
 			})
 		end,
-	}
+	},
 }

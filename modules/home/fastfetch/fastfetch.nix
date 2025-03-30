@@ -4,11 +4,11 @@
     programs.fastfetch = {
         enable = true;
 	settings = {
-		display = {
-		  color = {
+	  display = {
+	  	color = {
 			keys = "35";
 			output = "95";
-		  };
+		 };
 		  separator = "-> ";
 		};
 		logo = {
@@ -50,7 +50,7 @@
 	  }
 	  {
             type= "cursor";
-		key = " ├ 󰆿 "; 
+			key = " ├ 󰆿 "; 
 			keyColor = "white";
             outputColor = "red";
 		  }
@@ -58,17 +58,19 @@
 			type = "wmtheme";
 			key = " ├  ";
 			keyColor = "white";
+            		outputColor = "red";
 		  }
 		  {
 			type = "icons";
 			key = " ├ 󰀻 ";
 			keyColor = "white";
+            		outputColor = "red";
 		  }
 		  {
 			type = "terminal";	
 			key = " ├  ";	
 			keyColor = "white";	
-            outputColor = "red";
+            		outputColor = "red";
 		  }
 		  {
 			type = "terminalfont";	

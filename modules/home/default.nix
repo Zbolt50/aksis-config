@@ -26,6 +26,7 @@ in
     ./waybar.nix
     ./zathura.nix
     ./gtk/gtk.nix
+    ./virtualization.nix
 
   ];
 }
