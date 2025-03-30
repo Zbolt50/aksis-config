@@ -1,5 +1,6 @@
-{ host, ... }:
+{ config, host, ... }:
 # Intel System Config
+# Might add hardware input here and add if else logic
 {
   imports = [
     ../../hosts/${host} 

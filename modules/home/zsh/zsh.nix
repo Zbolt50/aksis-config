@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, host, ... }:
 
 {
     # bash but awesome
@@ -35,6 +35,12 @@
             la = "ls -a";
             ff = "fastfetch";
             nixdev = "nix develop -c $SHELL";
+            # Aliases to save typing commands over and over after the first successful
+            # host build
+            update-build = "sudo nixos-rebuild build --flake .#${host}"; 
+            update-boot = "sudo nixos-rebuild boot --flake .#${host}"; 
+            update-switch = "sudo nixos-rebuild switch --flake .#${host}";
+            update-test = "sudo nixos-rebuild test --flake .#${host}"; 
         };
     };
 }

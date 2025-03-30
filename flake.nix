@@ -9,10 +9,6 @@
     stylix.url = "github:danth/stylix";
     # Handles the hardware for things like laptops
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    #firefox-addons = { 
-      #url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      #inputs.nixpkgs.follows = "nixpkgs"; 
-    #};
   };
 
   outputs = {
@@ -32,6 +28,7 @@
 
     nixosConfigurations = {
       thinkpad = nixpkgs.lib.nixosSystem {
+      # Find a way to inherit the host name from this and not manually typing it out in the variable
         inherit system; 
         specialArgs = {
           inherit inputs; 
@@ -43,6 +40,7 @@
         modules = [ 
         ./profiles/intel
 	    # Hardware for T480
+        # move this to ./profiles/intel later
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
         ];
       };
