@@ -2,7 +2,7 @@
 # virtualisation config
 {
 
-# TODO: Make this into a toggleable module of some kind
+    # TODO: Make this toggleable
 
     # Enabled just in case
     programs.dconf.enable = true;

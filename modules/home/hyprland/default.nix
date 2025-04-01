@@ -7,5 +7,6 @@
 	./monitors.nix
 	./styling.nix
     ./animations.nix
+    ./hyprlock.nix
    ]; 
 }

@@ -9,6 +9,7 @@
     ./pipewire.nix
     ./users.nix
     #./sddm.nix
+    ./greetd.nix
     ./xserver.nix
     ./services.nix
     ./virtualization.nix
