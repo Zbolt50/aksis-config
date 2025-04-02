@@ -33,5 +33,4 @@ keymap.set("n", "<A-j>", ":resize +2<CR>", defaults)
 keymap.set("n", "<A-k>", ":resize -2<CR>", defaults)
 keymap.set("n", "<A-l>", ":vertical resize -2<CR>", defaults)
 -- Insert empty line without entering insert mode
-
 keymap.set("n", "<S-o>", ':<C-u>call append(line("."), repeat([""], v:count1))<CR>', defaults)

@@ -5,7 +5,8 @@ return {
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
-			cpp = { "cpplint" },
+			-- Turn back on later
+			--cpp = { "cpplint" },
 			python = { "pylint" },
 		}
 

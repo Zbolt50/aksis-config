@@ -4,6 +4,7 @@ return {
 	tag = "0.1.8",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+		"nvim-telescope/telescope-media-files.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
 		"nvim-tree/nvim-web-devicons",
 		--"nvim-telescope/telescope-project.nvim",
@@ -12,6 +13,7 @@ return {
 		local keymap = vim.keymap
 		local telescope = require("telescope")
 		local builtin = require("telescope.builtin")
+		telescope.load_extension("media_files")
 		telescope.load_extension("remote-sshfs")
 		telescope.setup({
 			pickers = {

@@ -17,6 +17,7 @@
         luarocks
 		stylua
         # Nix
+        # These don't work right atm, but this will be solved later.
         nil
         nixfmt-rfc-style
         # Neovim dependencies
