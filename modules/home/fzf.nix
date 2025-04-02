@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 # FZF config
 {
-	programs.fzf = {
-		enable = true;
-	};
+  programs.fzf = {
+    enable = true;
+  };
 }

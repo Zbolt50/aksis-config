@@ -1,9 +1,9 @@
-{ config, host, ... }:
+{ host, ... }:
 # Intel System Config
 # Might add hardware input here and add if else logic
 {
   imports = [
-    ../../hosts/${host} 
+    ../../hosts/${host}
     ../../modules/core/default.nix
   ];
   # Potentially need to add drivers in the near future

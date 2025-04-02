@@ -24,7 +24,7 @@
     pciutils
     usbutils
     inetutils
-    gparted 
+    gparted
     btop
     # Bluetooth
     bluetui
@@ -32,7 +32,7 @@
     # Other stuff
     ripgrep
     qmk
-    #R # For PPL 
+    #R # For PPL
     #rstudio # For PPL
     cmatrix
     pipes
@@ -43,6 +43,5 @@
     vesktop
     thunderbird
   ];
-  
 
 }

@@ -1,11 +1,19 @@
-{ inputs, host, username, ... }:
+{
+  host,
+  ...
+}:
 let
   hostVars = import ../../hosts/${host}/variables.nix;
-  inherit (hostVars) browser terminal fileBrowser windowManager;
+  inherit (hostVars)
+    browser
+    terminal
+    fileBrowser
+    windowManager
+    ;
 in
 {
   imports = [
-    ./${terminal}.nix 
+    ./${terminal}.nix
     # Make this import folder with a default.nix inside each one
     #./${windowManager}/${windowManager}.nix
     ./${windowManager}

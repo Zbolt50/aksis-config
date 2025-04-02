@@ -1,5 +1,5 @@
-{ config, pkgs, ... }:
-# Pipewire config 
+{ pkgs, ... }:
+# Pipewire config
 {
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;

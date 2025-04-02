@@ -1,7 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 {
   # System Defaults that will never change
-  system.stateVersion = "24.11"; 
+  system.stateVersion = "24.11";
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -19,7 +19,10 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Auto clean old generations
   nix.gc = {
     automatic = true;

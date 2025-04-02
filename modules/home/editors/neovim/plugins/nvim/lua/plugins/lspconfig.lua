@@ -28,8 +28,17 @@ return {
 			lspconfig["pyright"].setup({
 				capabilities = capabilities,
 			})
-			lspconfig["texlab"].setup({
+			lspconfig["nil_ls"].setup({
 				capabilities = capabilities,
+				settings = {
+					["nil"] = {
+						formatting = {
+							command = {
+								"nixfmt",
+							},
+						},
+					},
+				},
 			})
 		end,
 	},

@@ -1,37 +1,41 @@
-{ config, pkgs, username, ... }:
+{
+  pkgs,
+  username,
+  ...
+}:
 # virtualisation config
 {
 
-    # TODO: Make this toggleable
+  # TODO: Make this toggleable
 
-    # Enabled just in case
-    programs.dconf.enable = true;
+  # Enabled just in case
+  programs.dconf.enable = true;
 
-    # User group config
-    users.groups.libvirtd.members = ["${username}"];
-    users.users.${username}.extraGroups = [ "libvirtd" ];
+  # User group config
+  users.groups.libvirtd.members = [ "${username}" ];
+  users.users.${username}.extraGroups = [ "libvirtd" ];
 
-    boot.kernelModules = [ "kvm-intel" ];
-    
-    virtualisation = {
-        libvirtd = { 
-            enable = true;
-            qemu = {
-                swtpm.enable = true;
-                ovmf.enable = true;
-                ovmf.packages = [ pkgs.OVMFFull.fd ];
-            };
-        };
-        spiceUSBRedirection.enable = true;
+  boot.kernelModules = [ "kvm-intel" ];
+
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu = {
+        swtpm.enable = true;
+        ovmf.enable = true;
+        ovmf.packages = [ pkgs.OVMFFull.fd ];
+      };
     };
-    services.spice-vdagentd.enable = true;
+    spiceUSBRedirection.enable = true;
+  };
+  services.spice-vdagentd.enable = true;
 
-    environment.systemPackages = with pkgs; [
-        virt-manager
-        virt-viewer
-        spice
-        spice-gtk
-        spice-protocol
-    ];
+  environment.systemPackages = with pkgs; [
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+  ];
 
 }

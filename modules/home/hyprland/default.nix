@@ -1,13 +1,13 @@
 { ... }:
 # All imports for hyprland
 {
-   imports = [
+  imports = [
     ./hyprland.nix
     ./keybinds.nix
-	./monitors.nix
-	./styling.nix
+    ./monitors.nix
+    ./styling.nix
     ./animations.nix
     ./hyprlock.nix
     ./hyprpaper.nix
-   ]; 
+  ];
 }
