@@ -8,5 +8,6 @@
 	./styling.nix
     ./animations.nix
     ./hyprlock.nix
+    ./hyprpaper.nix
    ]; 
 }

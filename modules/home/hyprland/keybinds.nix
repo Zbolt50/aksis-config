@@ -11,7 +11,7 @@ in
     "$ctrlMod" = "SUPER_CTRL";
     "$altMod" = "SUPER_ALT";
     bind = [
-    	"$mainMod,R,exec,wofi --show drun"
+   	"$mainMod,R,exec,wofi --show drun"
 	"$mainMod,Q,exec,${terminal}"
 	#"$mainMod,Q,exec,kitty"
 	"$mainMod,C, killactive"

@@ -14,7 +14,7 @@
 	# Moving these later
 	# environment vars
 	exec-once = [
-		"hyprpaper"
+        #"hyprpaper"
 		"waybar"
 		"dunst"
 		"dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -28,13 +28,16 @@
 	"AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
     # Make this source this from somewhere else later for
     # ultimate modularity
-    	"HYPRCURSOR_THEME,Bibata-Modern-Ice"
-    	"HYPRCURSOR_SIZE,22"
+   	"HYPRCURSOR_THEME,Bibata-Modern-Ice"
+    "HYPRCURSOR_SIZE,24"
+    "XDG_SESSION_TYPE,wayland"
+    "XDG_SESSION_DESKTOP,Hyprland"
    	];
 
 	gestures = {
 		workspace_swipe = true;
 	};
+
     };
     # external settings need this in the file
     # wayland.windowManager.hyprland.settings
@@ -44,8 +47,8 @@
   ];
   home.packages = with pkgs; [
      hyprland
-     hyprpaper                                                                             
      hyprcursor
+     hyprpaper
      dunst                                                                                 
      libnotify                                                                             
      nwg-displays   

@@ -10,7 +10,4 @@
             };
         };
     };
-
-    # need this
-    security.pam.services.hyprlock = {};
 }
