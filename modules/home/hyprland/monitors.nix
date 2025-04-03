@@ -8,5 +8,8 @@
       "desc:LG Electronics LG ULTRAWIDE 0x000532C6,transform,3"
       "desc:Viewteck Co. Ltd. GFV22CB,1920x1080@60.0,2448x1506,1.0"
     ];
+    windowrulev2 = [
+      "workspace special:discord, class:^(vesktop)$"
+    ];
   };
 }

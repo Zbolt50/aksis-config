@@ -27,6 +27,14 @@ return {
 			})
 			lspconfig["pyright"].setup({
 				capabilities = capabilities,
+				settings = {
+					python = {
+						analysis = {
+							useLibraryCodeForTypes = true,
+							diagnosticMode = "openFilesOnly",
+						},
+					},
+				},
 			})
 			lspconfig["nil_ls"].setup({
 				capabilities = capabilities,

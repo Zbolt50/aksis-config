@@ -7,15 +7,12 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    # Idk if this is even necessary but its staying
     systemd = {
       enable = true;
       enableXdgAutostart = true;
       variables = [ "--all" ];
     };
     settings = {
-      # Moving these later
-      # environment vars
       exec-once = [
         #"hyprpaper"
         "waybar"
@@ -23,7 +20,8 @@
         "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user start hyprpolkitagent"
-        "hyprctl setcursor Bibata-Modern-Ice 22"
+        # Move later
+        "hyprctl setcursor Bibata-Modern-Ice 24"
       ];
 
       env = [
@@ -33,6 +31,8 @@
         # ultimate modularity
         "HYPRCURSOR_THEME,Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE,24"
+        "XCURSOR_THEME,Bibata-Modern-Ice"
+        "XCURSOR_SIZE,24"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
       ];
@@ -58,5 +58,7 @@
     wl-clipboard
     hyprpolkitagent
     # Add screenshot tool
+    grim
+    slurp
   ];
 }

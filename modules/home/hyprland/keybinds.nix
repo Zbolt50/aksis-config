@@ -65,6 +65,8 @@ in
       # Special Workspace
       "$mainMod, S, togglespecialworkspace, scratchpad"
       "$shiftMod, S, movetoworkspace, special:scratchpad"
+      "$mainMod, D, togglespecialworkspace, discord"
+      "$shiftMod, D, movetoworkspace, special:discord"
 
       # Mouse
       "$mainMod, mouse_down, workspace, e+1"

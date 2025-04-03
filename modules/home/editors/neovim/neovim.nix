@@ -25,10 +25,21 @@
       lua-language-server
       luarocks
       stylua
+
       # Nix
       # These don't work right atm, but this will be solved later.
-      #nil
+      nil
       nixfmt-rfc-style
+
+      # C/C++
+      clang-tools
+
+      # Python
+      pyright
+      pylint
+      isort
+      black
+
       # Neovim dependencies
       ripgrep
       fzf

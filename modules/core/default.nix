@@ -13,32 +13,49 @@
     ./xserver.nix
     ./services.nix
     ./virtualization.nix
+    ./steam.nix
     ./kanata.nix
   ];
   # Default systemPackages that everyone and their mother needs
   environment.systemPackages = with pkgs; [
+
     wget
-    efibootmgr
     tree
+    killall
+
     # System Utils
     pciutils
     usbutils
     inetutils
-    gparted
     btop
+    # Disk Tools
+    gparted
+    efibootmgr
+
     # Bluetooth
     bluetui
     bluez
+
+    # Audio/Music Utilities
+    ffmpeg
+    playerctl
+
+    # Files/Archiving
+    zip
+    unzip
+
     # Other stuff
     ripgrep
     qmk
+
     #R # For PPL
     #rstudio # For PPL
+
+    # Fun stuff
+    cowsay
     cmatrix
     pipes
-    zip
-    unzip
-    lftp
+
     # Communication/Email - will migrate to diff folder soon
     vesktop
     thunderbird

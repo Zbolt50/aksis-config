@@ -21,7 +21,7 @@
     keyboards = {
       internalKeyboard = {
         # Specify kanata for specific boards
-        # Good for QMK boards with this enabled
+        # Good for not redoing HRM on QMK boards with this enabled
         devices = [
           # Use `ls /dev/input/by-path/` to find your keyboard devices.
           "/dev/input/by-path/platform-i8042-serio-0-event-kbd"

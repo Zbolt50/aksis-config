@@ -35,6 +35,7 @@ in
     ./zathura.nix
     ./gtk/gtk.nix
     ./virtualization.nix
+    ./mangohud.nix
 
   ];
 }
