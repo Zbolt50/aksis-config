@@ -12,6 +12,8 @@
       enableXdgAutostart = true;
       variables = [ "--all" ];
     };
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+
     settings = {
       exec-once = [
         #"hyprpaper"
@@ -26,17 +28,30 @@
 
       env = [
         "NIXOS_OZONE_1L, 1"
+        "NIXPKGS_ALLOW_UNFREE, 1"
+        "XDG_CURRENT_DESKTOP, Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+        "GDK_BACKEND, wayland, x11"
+        "CLUTTER_BACKEND, wayland"
+        "SDL_VIDEODRIVER, x11"
         "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
+
         # Make this source this from somewhere else later for
         # ultimate modularity
         "HYPRCURSOR_THEME,Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE,24"
         "XCURSOR_THEME,Bibata-Modern-Ice"
         "XCURSOR_SIZE,24"
-        "XDG_SESSION_TYPE,wayland"
-        "XDG_SESSION_DESKTOP,Hyprland"
+        "EDITOR,nvim"
+
       ];
 
+      cursor = {
+        sync_gsettings_theme = true;
+        no_hardware_cursors = 2;
+        enable_hyprcursor = false;
+      };
       gestures = {
         workspace_swipe = true;
       };
@@ -48,6 +63,7 @@
   systemd.user.targets.hyprland-session.Unit.Wants = [
     "xdg-desktop-autostart.target"
   ];
+
   home.packages = with pkgs; [
     hyprland
     hyprcursor
@@ -60,5 +76,8 @@
     # Add screenshot tool
     grim
     slurp
+
+    # xwayland video bridge
+    kdePackages.xwaylandvideobridge
   ];
 }

@@ -40,6 +40,15 @@
       isort
       black
 
+      # Web Dev (ew)
+
+      # JS/TS
+      # Node JS
+      nodejs_23
+      # Find a nix way to install certain language servers
+
+      # CSS
+      csslint
       # Neovim dependencies
       ripgrep
       fzf

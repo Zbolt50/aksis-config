@@ -36,6 +36,7 @@ in
     ./gtk/gtk.nix
     ./virtualization.nix
     ./mangohud.nix
+    ./spotify.nix
 
   ];
 }

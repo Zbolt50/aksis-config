@@ -22,6 +22,7 @@
     wget
     tree
     killall
+    vim
 
     # System Utils
     pciutils
@@ -48,10 +49,11 @@
     ripgrep
     qmk
 
-    #R # For PPL
-    #rstudio # For PPL
+    R # For PPL
+    rstudio # For PPL
 
     # Fun stuff
+    # aseprite
     cowsay
     cmatrix
     pipes
@@ -59,6 +61,9 @@
     # Communication/Email - will migrate to diff folder soon
     vesktop
     thunderbird
+    zoom-us
   ];
+  # Testing this, might fix screen sharing
+  programs.hyprland.enable = true;
 
 }

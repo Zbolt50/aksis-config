@@ -166,5 +166,174 @@ in
         # Second option is more likely
       }
     ];
+    style = ''
+          
+      *{
+          /* `otf-font-awesome` is required to be installed for icons */
+          font-size: 14px;
+      }
+      #waybar {
+          font-family: "JetBrainsMono Nerd Font";
+          font-size: 12px;
+          opacity: 0.9;
+      }
+
+      #window {
+          padding: 0 10px;
+      }
+      #waybar.modules-left{
+          border-top: 2px solid #800000; 
+      }
+
+      window#waybar {
+          border: none;
+          box-shadow: none;
+          text-shadow: none;
+          transition-duration: 0s;
+          color: rgba(217, 216, 216, 1);
+          background: rgba(0, 0, 0, 0.87);
+      }
+      /*:hover{
+          background-color: #333
+      }
+      */
+      window#waybar.solo {
+          background: #750303;
+      }
+
+      window#waybar.empty {
+          /* display: none; */
+      }
+
+      button {
+          /* Use box-shadow instead of border so the text isn't offset */
+          box-shadow: inset 0 -3px transparent;
+          /* Avoid rounded borders under each button name */
+          border: none;
+          border-radius: 0;
+      }
+
+      #workspaces {
+          margin: 0 5px;
+      }
+
+      #workspaces button {
+          border-top: 2px solid #800000;
+         /* padding: 0  8px;*/
+      }
+
+      #workspaces button.visible {
+          color: rgba(217, 216, 216, 1);
+      }
+
+      #workspaces button.active {
+          border-top: 3px solid #ce2029;
+      }
+
+      #workspaces button.urgent {
+          background-color: #943432;
+          color: white;
+      }
+
+      #workspaces button:hover {
+          border-color: #B76262;
+          color: #888888;
+      }
+
+      /* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
+
+      #workspaces button.focused {
+          color: #800000;
+      }
+      #tray,
+      #mode,
+      #temperature,
+      #cpu,
+      #memory,
+      #pulseaudio{
+          padding: 0 5px;
+          border-top: 2px solid #800000;
+      }
+      #pulseaudio:hover{
+          border-top: 2px solid #ce2029;
+      }
+      #bluetooth{
+          padding: 0 5px 0 5px;
+          border-top: 2px solid #800000;
+      }
+
+      #bluetooth:hover {
+          border-top: 2px solid #ce2029;
+      }
+      #power-profiles-daemon{
+          padding: 0 10px 0 5px;
+          border-top: 2px solid #800000;
+      }
+      #power-profiles-daemon:hover{
+          border-top: 2px solid #ce2029;
+      }
+      #network{
+          padding: 0 5px 0 5px;
+          border-top: 2px solid #800000;
+      }
+      #network:hover {
+          border-top: 2px solid #ce2029;
+      }
+      #custom-media {
+          margin: 0px 0px 0px 10px;
+          padding: 0 5px 0 5px;
+          border-top: 2px solid #800000; 
+      }
+      #clock {
+          border-top: 2px solid #800000;
+          margin:  0px 16px 0px 10px;
+      } 
+      #clock:hover {
+          margin: 0px 16px 0px 10px;
+          border-top: 2px solid #ce2029;
+      }
+      #battery {
+          margin: 0px 10px 0px 10px;
+      }
+      #battery.warning {
+          color: rgba(255, 210, 4, 1);
+      }
+
+      #battery.critical {
+          color: rgba(238, 46, 36, 1);
+      }
+
+      #battery.charging {
+          color: rgba(0, 216, 0, 1);
+      }
+      #battery.plugged {
+          color: rgba(0, 216, 0, 1);
+      }
+      #custom-power {
+          margin : 0px 10px 0px 10px;
+      }
+      #custom-album-art {
+          font-size : 20px;
+          background-image : url("/tmp/kunst.png");
+      }
+      @keyframes blink {
+          to {
+              background-color: #ffffff;
+              color: black;
+          }
+      }
+      #cpu {
+      	padding: 0 5px 0 5px;
+      	margin: 0px 10px 0px 10px;
+          	border-top: 2px solid #800000;
+      }
+      tooltip {
+        font-family: "JetBrainsMono Nerd Font";
+        color: white;
+        background-color: #000000;
+        text-shadow: none;
+        border-color : #800000;
+      }
+    '';
   };
 }
