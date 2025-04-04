@@ -53,7 +53,8 @@
     rstudio # For PPL
 
     # Fun stuff
-    # aseprite
+    aseprite
+    tiled
     cowsay
     cmatrix
     pipes

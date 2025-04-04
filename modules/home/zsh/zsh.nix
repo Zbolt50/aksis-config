@@ -26,6 +26,7 @@ in
       plugins = [
         "zsh-interactive-cd"
         "git"
+        "git-auto-fetch"
         "thefuck"
       ];
     };
