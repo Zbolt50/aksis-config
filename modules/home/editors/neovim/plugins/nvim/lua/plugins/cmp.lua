@@ -59,6 +59,7 @@ return {
 				{ name = "buffer" },
 				{ name = "path" },
 				{ name = "cmp_r" },
+				{ name = "render_markdown" },
 			}),
 
 			formatting = {

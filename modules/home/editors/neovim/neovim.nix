@@ -40,6 +40,9 @@
       isort
       black
 
+      # Markdown
+      marksman
+
       # Web Dev (ew)
 
       # JS/TS
@@ -49,9 +52,15 @@
 
       # CSS
       csslint
+
+      #LaTeX
+      latexrun
+      texlab
+
       # Neovim dependencies
       ripgrep
       fzf
+
     ];
   };
 

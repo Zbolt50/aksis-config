@@ -71,7 +71,9 @@ in
       # Mouse
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
-
+      # Screenshot tools
+      #", PRINT, exec grimblast copysave area"
+      #"$shiftMod, Print, exec, grimblast copysave output"
       # Laptop Binds
     ];
     # Mouse Binds

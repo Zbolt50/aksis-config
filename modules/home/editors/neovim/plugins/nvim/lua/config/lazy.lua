@@ -58,6 +58,7 @@ vim.opt.termguicolors = true
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
 vim.opt.conceallevel = 1
+
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
@@ -71,6 +72,7 @@ require("lazy").setup({
 	checker = { enabled = true, notify = false },
 	change_detection = { notify = false },
 })
+
 -- Disable Mouse Popup
 vim.cmd("autocmd VimEnter * silent! aunmenu PopUp.How-to\\ disable\\ mouse")
 vim.cmd("aunmenu PopUp.-1-")

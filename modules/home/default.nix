@@ -37,6 +37,7 @@ in
     ./virtualization.nix
     ./mangohud.nix
     ./spotify.nix
+    ./feh.nix
 
   ];
 }
