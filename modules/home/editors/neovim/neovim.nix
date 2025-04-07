@@ -56,6 +56,7 @@
       #LaTeX
       latexrun
       texlab
+      texlive
 
       # Neovim dependencies
       ripgrep

@@ -51,6 +51,9 @@ return {
 			lspconfig["marksman"].setup({
 				capabilities = capabilities,
 			})
+			lspconfig["texlab"].setup({
+				capabilities = capabilities,
+			})
 		end,
 	},
 }

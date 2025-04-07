@@ -14,7 +14,7 @@ return {
 		local telescope = require("telescope")
 		local builtin = require("telescope.builtin")
 		telescope.load_extension("media_files")
-		telescope.load_extension("remote-sshfs")
+		--telescope.load_extension("remote-sshfs")
 		telescope.setup({
 			pickers = {
 				find_files = {
