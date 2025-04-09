@@ -80,4 +80,4 @@ vim.cmd("colorscheme siva")
 -- Plugin Specific Options
 vim.g.nvim_tree_respect_buf_cwd = 1
 -- vimtex
---vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_view_method = "zathura"

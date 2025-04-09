@@ -54,6 +54,10 @@ return {
 			lspconfig["texlab"].setup({
 				capabilities = capabilities,
 			})
+
+			lspconfig["phpactor"].setup({
+				capabilities = capabilities,
+			})
 		end,
 	},
 }

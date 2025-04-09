@@ -15,8 +15,9 @@
     plugins = with pkgs; [
       # This handles the nvim-treesitter compile errors
       vimPlugins.nvim-treesitter.withAllGrammars
-
     ];
+
+    # TODO: Move this to home.packages later so the $PATH is correct
 
     extraPackages = with pkgs; [
       # Put LSPs, Linters, and other tools here
@@ -43,20 +44,25 @@
       # Markdown
       marksman
 
-      # Web Dev (ew)
+      # JS/TS ( Gross )
+      typescript-language-server
 
-      # JS/TS
       # Node JS
       nodejs_23
       # Find a nix way to install certain language servers
 
       # CSS
       csslint
+      nodePackages.prettier
 
       #LaTeX
-      latexrun
-      texlab
-      texlive
+      latexrun # compiler
+      texlab # LSP
+      texliveBasic # LaTeX
+
+      # PHP
+      phpactor # LSP
+      php84 # php
 
       # Neovim dependencies
       ripgrep
