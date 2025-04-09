@@ -28,8 +28,10 @@
           # Good for not redoing HRM on QMK boards with this enabled
           devices = [
             # Use `ls /dev/input/by-path/` to find your keyboard devices.
+            # Or use /dev/input/by-id/
             "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
             "/dev/input/by-path/pci-0000:00:14.0-usb-0:3:1.0-event-kbd"
+            "/dev/input/by-id/usb-_Akko_2.4G_Wireless_Keyboard-event-kbd"
             # Look for another device if this doesnt work
           ];
           extraDefCfg = ''

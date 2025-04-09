@@ -5,7 +5,7 @@
       noto-fonts-emoji
       font-awesome
       nerd-fonts.jetbrains-mono
-      nerd-fonts.gohufont
+      # Find a serif font at some point.
     ];
   };
 }

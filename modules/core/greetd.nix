@@ -6,6 +6,7 @@
     settings = {
       default_session = {
         user = username;
+        # Modularize this later
         command = "${pkgs.hyprland}/bin/Hyprland";
       };
     };

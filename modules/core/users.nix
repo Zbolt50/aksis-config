@@ -6,6 +6,7 @@
   ...
 }:
 {
+  # TODO: Move home-manager to its own file later
   imports = [
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -20,7 +21,6 @@
         username = "${username}";
         homeDirectory = "/home/${username}";
         stateVersion = "24.11";
-        #programs.home-manager.enable = true;
       };
       programs.home-manager.enable = true;
     };
@@ -41,6 +41,7 @@
     shell = pkgs.zsh;
   };
   programs.zsh.enable = true;
+
   # Ensure user has permission to use Nix
   nix.settings.allowed-users = [ username ]; # Corrected to a proper list
 }

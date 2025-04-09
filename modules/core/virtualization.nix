@@ -15,7 +15,9 @@
   users.groups.libvirtd.members = [ "${username}" ];
   users.users.${username}.extraGroups = [ "libvirtd" ];
 
-  boot.kernelModules = [ "kvm-intel" ];
+  # Gonna wanna make this one system-specific, not a big deal for now
+  # boot.kernelModules = [ "kvm-intel" ];
+  # This might be pre-defined in the generated hardware-config on fresh install, we'll see though.
 
   virtualisation = {
     libvirtd = {

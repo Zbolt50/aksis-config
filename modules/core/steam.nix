@@ -4,7 +4,7 @@
   config,
   ...
 }:
-# Make this a module later
+
 {
   options = {
     steam.enable = lib.mkEnableOption "Enable Steam and other Gaming Utils";

@@ -8,7 +8,6 @@
     ./networking.nix
     ./pipewire.nix
     ./users.nix
-    #./sddm.nix
     ./greetd.nix
     ./xserver.nix
     ./services.nix
@@ -29,6 +28,7 @@
     usbutils
     inetutils
     btop
+
     # Disk Tools
     gparted
     efibootmgr
@@ -63,8 +63,19 @@
     vesktop
     thunderbird
     zoom-us
+
+    # Switch Homebrew
+    fusee-nano
+    fusee-launcher
+    fusee-interfacee-tk
+
+    #Java
   ];
   # Testing this, might fix screen sharing
   programs.hyprland.enable = true;
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk11;
+  };
 
 }
