@@ -45,14 +45,17 @@ in
       nixdev = "nix develop -c $SHELL";
       # Aliases to save typing commands over and over after the first successful
       # host build
-      update-build = "sudo nixos-rebuild build --flake .#${host}";
-      update-boot = "sudo nixos-rebuild boot --flake .#${host}";
-      update-switch = "sudo nixos-rebuild switch --flake .#${host}";
-      update-test = "sudo nixos-rebuild test --flake .#${host}";
+      update-build = "cd ~/aksis-config && sudo nixos-rebuild build --flake .#${host}";
+      update-boot = "cd ~/aksis-config && sudo nixos-rebuild boot --flake .#${host}";
+      update-switch = "cd ~/aksis-config && sudo nixos-rebuild switch --flake .#${host}";
+      update-test = "cd ~/aksis-config && sudo nixos-rebuild test --flake .#${host}";
+
       # Git
       lg = "lazygit";
       gs = "git status";
-
+      gb = "git blame";
+      gp = "git pull";
+      gP = "git push";
     };
   };
 }

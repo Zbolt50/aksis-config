@@ -1,5 +1,6 @@
 {
   host,
+  pkgs,
   ...
 }:
 let
@@ -38,6 +39,11 @@ in
     ./mangohud.nix
     ./spotify.nix
     ./feh.nix
+    ./xdg.nix
 
+  ];
+
+  home.packages = with pkgs; [
+    php
   ];
 }
