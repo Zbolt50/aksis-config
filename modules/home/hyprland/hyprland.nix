@@ -73,11 +73,12 @@
     nwg-displays
     wl-clipboard
     hyprpolkitagent
+
     # Add screenshot tool
-    grim
-    slurp
+    hyprshot
 
     # xwayland video bridge
-    kdePackages.xwaylandvideobridge
+    # Might need this?
+    #kdePackages.xwaylandvideobridge
   ];
 }

@@ -72,9 +72,14 @@ in
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
       # Screenshot tools
-      #", PRINT, exec grimblast copysave area"
-      #"$shiftMod, Print, exec, grimblast copysave output"
+
+      # Whole window
+      ", PRINT, exec, hyprshot -m window"
+      # Whole Monitor
+      "CTRL, PRINT, exec, hyprshot -m monitor"
       # Laptop Binds
+      "$mainMod, PRINT, exec, hyprshot -m region"
+
     ];
     # Mouse Binds
     bindm = [
