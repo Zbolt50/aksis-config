@@ -1,4 +1,9 @@
-{ lib, ... }:
+{
+  config,
+  lib,
+  username,
+  ...
+}:
 # Kitty 🐱 :7
 {
   programs.kitty = lib.mkForce {
@@ -7,7 +12,7 @@
       confirm_os_window_close = 0;
       dynamic_background_opacity = true;
       enable_audio_bell = false;
-      # background_opacity = "0.7";
+      background_opacity = "0.7";
       background_blur = 5;
 
       # Cursor
@@ -26,7 +31,7 @@
 
       # Themeing
       # Fixing this to be in kitty folder later
-      include = "current-theme.conf";
+      include = "siva.conf";
 
       # Urls
       url_color = "#fa8072";
@@ -36,4 +41,8 @@
 
     };
   };
+  xdg.configFile."kitty/siva.conf" = {
+    source = config.lib.file.mkOutOfStoreSymlink /home/${username}/aksis-config/modules/home/kitty/siva.conf;
+  };
+
 }

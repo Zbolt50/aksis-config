@@ -14,7 +14,7 @@ let
 in
 {
   imports = [
-    ./${terminal}.nix
+    ./${terminal}/${terminal}.nix
     # Make this import folder with a default.nix inside each one
     #./${windowManager}/${windowManager}.nix
     ./${windowManager}

@@ -38,17 +38,17 @@ in
       }
     ];
     shellAliases = {
-      ls = "ls --color=auto";
+      ls = "ls --color=always";
       ll = "ls -l";
       la = "ls -a";
       ff = "fastfetch";
       nixdev = "nix develop -c $SHELL";
       # Aliases to save typing commands over and over after the first successful
       # host build
-      update-build = "cd ~/aksis-config && sudo nixos-rebuild build --flake .#${host}";
-      update-boot = "cd ~/aksis-config && sudo nixos-rebuild boot --flake .#${host}";
-      update-switch = "cd ~/aksis-config && sudo nixos-rebuild switch --flake .#${host}";
-      update-test = "cd ~/aksis-config && sudo nixos-rebuild test --flake .#${host}";
+      update-build = "cd ~/aksis-config && sudo nixos-rebuild build --flake .#${host} && cd -";
+      update-boot = "cd ~/aksis-config && sudo nixos-rebuild boot --flake .#${host} && cd -";
+      update-switch = "cd ~/aksis-config && sudo nixos-rebuild switch --flake .#${host} && cd -";
+      update-test = "cd ~/aksis-config && sudo nixos-rebuild test --flake .#${host} && cd -";
 
       # Git
       lg = "lazygit";
@@ -56,6 +56,13 @@ in
       gb = "git blame";
       gp = "git pull";
       gP = "git push";
+      gf = "git fetch";
+      gM = "git merge";
+      gc = "git commit";
+
+      # Kitty- might add if/else so these dont show up in other terminals
+      icat = "kitten icat";
+
     };
   };
 }
