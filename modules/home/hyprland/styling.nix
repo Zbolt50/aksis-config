@@ -35,7 +35,10 @@
         passes = 1;
         vibrancy = 0.1696;
       };
-
+    };
+    dwindle = {
+      pseudotile = true;
+      preserve_split = true;
     };
   };
 }

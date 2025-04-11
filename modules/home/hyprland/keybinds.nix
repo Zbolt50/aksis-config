@@ -11,11 +11,9 @@ in
     "$ctrlMod" = "SUPER_CTRL";
     "$altMod" = "SUPER_ALT";
     bind = [
-      "$mainMod,R,exec,wofi --show drun"
+      "$mainMod,R,exec, pkill wofi || wofi --show drun"
       "$mainMod,Q,exec,${terminal}"
-      #"$mainMod,Q,exec,kitty"
       "$mainMod,C, killactive"
-      # Might need if/else logic if dolphin is selected
       "$mainMod,E,exec,${fileBrowser}"
 
       # Vim-like window-navigation
@@ -35,7 +33,7 @@ in
       "$ctrlMod, l, resizeactive, 20 0"
 
       # Window Binds
-      "$mainMod, Y, togglesplit"
+      "$mainMod, Y, layoutmsg, togglesplit"
       "$mainMod, F, fullscreen"
       "$mainMod, P, pseudo"
       "$mainMod, V, togglefloating"
@@ -73,13 +71,12 @@ in
       "$mainMod, mouse_up, workspace, e-1"
       # Screenshot tools
 
-      # Whole window
+      # Whole Window
       ", PRINT, exec, hyprshot -m window"
       # Whole Monitor
       "CTRL, PRINT, exec, hyprshot -m monitor"
-      # Laptop Binds
+      # Region Select
       "$mainMod, PRINT, exec, hyprshot -m region"
-
     ];
     # Mouse Binds
     bindm = [
@@ -94,6 +91,9 @@ in
       " ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
       " ,XF86MonBrightnessUp, exec, brightnessctl s 10%+"
       " ,XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+    ];
+    bindl = [
+      # TODO: Add Laptop Lid switch checking
     ];
   };
 }
