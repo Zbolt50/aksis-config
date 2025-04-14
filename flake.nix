@@ -6,7 +6,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix";
+    #stylix.url = "github:danth/stylix";
+    nixtendo-switch = {
+      url = "github:nyawox/nixtendo-switch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
@@ -14,7 +18,8 @@
     {
       nixpkgs,
       home-manager,
-      stylix,
+      #stylix,
+      nixtendo-switch,
       nixos-hardware,
       ...
     }@inputs:
