@@ -69,10 +69,15 @@
     fusee-launcher
     fusee-interfacee-tk
 
-    #Java
+    # CD/DVD Reading
+    kdePackages.k3b
+    #libsForQt5.k3b
+
   ];
   # Testing this, might fix screen sharing
   programs.hyprland.enable = true;
+
+  # Java
   programs.java = {
     enable = true;
     package = pkgs.jdk11;

@@ -36,6 +36,7 @@
       "networkmanager"
       "wheel"
       "uinput"
+      "cdrom"
     ];
     # Make this a variable later?
     shell = pkgs.zsh;

@@ -22,10 +22,12 @@ in
     ./${fileBrowser}.nix
     ./${browser}.nix
     ./zsh/zsh.nix
+
+    # Get rid of old dotfiles later
     ./dotfiles.nix
 
-    # TODO: MAKE NEOVIM NIX AGAIN
     ./editors/neovim/neovim.nix
+
     # TODO: send programs to seperate folder to be sourced
     ./git.nix
     ./fastfetch
@@ -37,10 +39,9 @@ in
     ./gtk/gtk.nix
     ./virtualization.nix
     ./mangohud.nix
-    ./spotify.nix
-    ./feh.nix
     ./xdg.nix
-
+    # Music
+    ./music
   ];
 
   home.packages = with pkgs; [
