@@ -8,6 +8,7 @@ return {
 			-- Turn back on later
 			--cpp = { "cpplint" },
 			--python = { "pylint" },
+			--css = { "csslint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

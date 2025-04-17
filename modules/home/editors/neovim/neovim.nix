@@ -18,7 +18,7 @@
     ];
 
     # TODO: Move this to home.packages later so the $PATH is correct
-
+    extraLuaPackages = ps: [ ps.magick ];
     extraPackages = with pkgs; [
       # Put LSPs, Linters, and other tools here
 
@@ -46,6 +46,7 @@
 
       # JS/TS ( Gross )
       typescript-language-server
+      eslint_d
 
       # Node JS
       nodejs_23
@@ -67,6 +68,7 @@
       # Neovim dependencies
       ripgrep
       fzf
+      imagemagick
 
     ];
   };

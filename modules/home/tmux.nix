@@ -15,11 +15,14 @@
     ];
     extraConfig = ''
       		# Window binds
-      		bind v split-window -h		
-      		bind h split-window -v
+      		bind v split-window -h -c "#{pane_current_path}"		
+      		bind h split-window -v -c "#{pane_current_path}"
       		unbind %
       		unbind '"'
-              set -g default-terminal screen-256color		
+            set -g default-terminal screen-256color		
+            # Allow image support with kitty
+            set -gq allow-passthrough on
+            set -g visual-activity off
       		# Source Plugins
       		source-file ~/.config/tmux/plugins/vim-tmux-navigator.conf
       		# Fix prefix-highlight

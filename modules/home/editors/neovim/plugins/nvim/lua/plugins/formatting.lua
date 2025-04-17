@@ -11,11 +11,16 @@ return {
 					c = { "clang-format" },
 					lua = { "stylua" },
 					python = { "black" },
+					javascript = { "prettier" },
+					typescript = { "prettier" },
+					css = { "prettier" },
+					html = { "prettier" },
+					php = { "prettier" },
 				},
 				format_on_save = {
 					lsp_fallback = true,
 					async = false,
-					timeout_ms = 1000,
+					timeout_ms = 500,
 				},
 			})
 			vim.api.nvim_create_user_command("FormatDisable", function(args)

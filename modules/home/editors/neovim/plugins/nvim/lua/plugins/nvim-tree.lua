@@ -18,7 +18,7 @@ return {
 			vim.keymap.set("n", "<C-r>", api.tree.change_root_to_parent, opts("Up"))
 			vim.keymap.set("n", "<C-v>", api.node.open.vertical, opts("Open: Vertical Split"))
 			vim.keymap.set("n", "<C-s>", api.node.open.horizontal, opts("Open: Horizontal Split"))
-			vim.keymap.set("n", "g?", api.tree.toggle_help, opts("Help"))
+			vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
 		end
 		require("nvim-tree").setup({
 			respect_buf_cwd = true,
