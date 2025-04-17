@@ -12,7 +12,7 @@
       ];
 
       wallpaper = [
-        ",~/aksis-config/modules/stylix/wallpapers/sivawallpaper.png"
+        ", ~/aksis-config/modules/stylix/wallpapers/sivawallpaper.png"
       ];
     };
   };

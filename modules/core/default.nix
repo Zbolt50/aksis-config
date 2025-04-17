@@ -18,6 +18,7 @@
   # Default systemPackages that everyone and their mother needs
   environment.systemPackages = with pkgs; [
 
+    # Essential tools to keep me from hating my life
     wget
     tree
     killall
@@ -54,7 +55,6 @@
 
     # Fun stuff
     aseprite
-    tiled
     cowsay
     cmatrix
     pipes
@@ -72,6 +72,9 @@
     # CD/DVD Reading
     kdePackages.k3b
     #libsForQt5.k3b
+
+    # Notes/Office
+    obsidian
 
   ];
   # Testing this, might fix screen sharing

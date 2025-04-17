@@ -55,7 +55,10 @@
       gestures = {
         workspace_swipe = true;
       };
-
+      misc = {
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+      };
     };
     # external settings need this in the file
     # wayland.windowManager.hyprland.settings

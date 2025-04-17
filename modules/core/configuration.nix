@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 {
   # System Defaults that will never change
   system.stateVersion = "24.11";
@@ -31,4 +31,17 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  # Creates necesary directories for my workflow if they do not exist
+  system.activationScripts.createDirectories.text = ''
+    if [ ! -d /home/${username}/Projects ]; then
+      mkdir -p /home/${username}/Projects
+      chown ${username}:users /home/${username}/Projects
+    fi
+
+    if [ ! -d /home/${username}/Vaults ]; then
+      mkdir -p /home/${username}/Vaults
+      chown ${username}:users /home/${username}/Vaults
+    fi
+  '';
 }
