@@ -37,7 +37,13 @@
 
     settings = {
       ncmpcpp_directory = "~/.local/share/ncmpcpp";
+      lyrics_directory = "~/.local/share/ncmpcpp";
+      execute_on_song_change = "~/.local/share/ncmpcpp/albumart";
     };
+  };
 
+  home.file.".local/share/ncmpcpp/albumart" = {
+    source = ./albumart.sh;
+    executable = true;
   };
 }
