@@ -13,7 +13,9 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
-
+	{
+		"nvim-treesitter/playground",
+	},
 	{
 		-- vim-airline
 		"vim-airline/vim-airline",
@@ -51,8 +53,8 @@ return {
 
 	{
 		-- siva.nvim | by yours truly :7
-		"Zbolt50/siva.nvim",
-		--dir = "~/Projects/siva.nvim",
+		--"Zbolt50/siva.nvim",
+		dir = "~/Projects/siva.nvim",
 	},
 	{
 		-- snacks.nvim

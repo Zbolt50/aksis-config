@@ -1,5 +1,6 @@
 { pkgs, ... }:
-
+# NOTE: I don't really use this for anything right now, but until I get this red color scheme into a perfect
+# base-16 format, I'll use this
 {
   stylix = {
     enable = true;

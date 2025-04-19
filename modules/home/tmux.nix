@@ -19,8 +19,13 @@
       		bind h split-window -v -c "#{pane_current_path}"
       		unbind %
       		unbind '"'
-            set -g default-terminal screen-256color		
+            # set -g default-terminal screen-256color		
+
+            set -g default-terminal "tmux-256color"
+            set -as terminal-overrides ',xterm-256color:Tc:sitm=\E[3m'
+
             # Allow image support with kitty
+
             set -gq allow-passthrough on
             set -g visual-activity off
       		# Source Plugins

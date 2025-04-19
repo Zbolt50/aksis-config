@@ -4,6 +4,7 @@ return {
 	tag = "0.1.8",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+		"nvim-lua/popup.nvim",
 		"nvim-telescope/telescope-media-files.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
 		"nvim-tree/nvim-web-devicons",
@@ -50,6 +51,15 @@ return {
 					additional_args = function()
 						return { "--hidden", "--glob", "!**/.git/*" }
 					end,
+				},
+			},
+			extensions = {
+				media_files = {
+					-- filetypes whitelist
+					-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+					filetypes = { "png", "webp", "jpg", "jpeg" },
+					-- find command (defaults to `fd`)
+					find_cmd = "rg",
 				},
 			},
 		})

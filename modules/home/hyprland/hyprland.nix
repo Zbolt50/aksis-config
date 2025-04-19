@@ -71,6 +71,7 @@
     hyprland
     hyprcursor
     hyprpaper
+    # TODO: Move to home-manager config later
     dunst
     libnotify
     nwg-displays

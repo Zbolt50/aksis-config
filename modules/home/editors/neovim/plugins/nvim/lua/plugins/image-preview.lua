@@ -16,6 +16,21 @@ return {
 					only_render_image_at_cursor = false,
 					floating_windows = false, -- if true, images will be rendered in floating markdown windows
 					filetypes = { "markdown", "vimwiki" }, -- markdown extensions (ie. quarto) can go here
+					resolve_image_path = function(document_path, image_path, fallback)
+						local obs = require("obsidian").get_client()
+						local vault_root = obs:vault_root().filename
+
+						-- If we're in a vault, try using vault behavior
+						if document_path:find(vault_root, 1, 1) then
+							local obs_rel = obs:vault_relative_path(image_path)
+
+							if obs_rel and vim.fn.filereadable(vault_root .. "/" .. obs_rel.filename) == 1 then
+								return vault_root .. "/" .. obs_rel.filename
+							end
+						end
+
+						return fallback(document_path, image_path)
+					end,
 				},
 				neorg = {
 					enabled = true,
