@@ -2,7 +2,7 @@
 # Graphics Drivers for AMD-GPU systems
 {
   imports = [
-    ../../hosts/${host}
+    #../../hosts/${host}
   ];
 
   # Enable AMD Graphics drivers

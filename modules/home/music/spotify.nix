@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, hostname, ... }:
 {
   programs.spotify-player = {
     enable = true;
@@ -6,6 +6,27 @@
     settings = {
 
     };
-    keymaps = [ ];
+    keymaps = [
+      {
+        command = "FocusNextWindow";
+        key_sequence = "l";
+      }
+      {
+        command = "FocusPreviousWindow";
+        key_sequence = "h";
+      }
+    ];
+  };
+
+  services.spotifyd = {
+    enable = true;
+    settings = {
+      global = {
+        username = "zbolt50";
+        ### ENCRYPT THIS BEFORE COMMITING YOU DOLT ###
+        password = "";
+        device_name = "nix";
+      };
+    };
   };
 }
