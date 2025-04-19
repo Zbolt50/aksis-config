@@ -23,6 +23,9 @@ in
     ./${browser}.nix
     ./zsh/zsh.nix
 
+    # Make toggleable
+    ./communication
+
     # Get rid of old dotfiles later
     ./dotfiles.nix
 
@@ -47,4 +50,5 @@ in
   home.packages = with pkgs; [
     php
   ];
+
 }
