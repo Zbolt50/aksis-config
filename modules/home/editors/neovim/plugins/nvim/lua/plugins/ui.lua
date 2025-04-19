@@ -53,8 +53,8 @@ return {
 
 	{
 		-- siva.nvim | by yours truly :7
-		--"Zbolt50/siva.nvim",
-		dir = "~/Projects/siva.nvim",
+		"Zbolt50/siva.nvim",
+		-- dir = "~/Projects/siva.nvim",
 	},
 	{
 		-- snacks.nvim

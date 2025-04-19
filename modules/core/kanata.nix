@@ -32,6 +32,7 @@
             "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
             "/dev/input/by-path/pci-0000:00:14.0-usb-0:3:1.0-event-kbd"
             "/dev/input/by-id/usb-_Akko_2.4G_Wireless_Keyboard-event-kbd"
+            "/dev/input/by-id/usb-ROYUAN_Akko_Multi-modes_Keyboard-B-event-kbd"
             # Look for another device if this doesnt work
           ];
           extraDefCfg = ''

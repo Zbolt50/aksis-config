@@ -24,6 +24,12 @@
           outputColor = "white";
         }
         {
+          type = "title";
+          key = " ├  ";
+          keyColor = "red";
+          outputColor = "white";
+        }
+        {
           type = "kernel";
           key = " ├ 󰌽 ";
           keyColor = "red";
