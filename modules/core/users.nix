@@ -3,7 +3,9 @@
   inputs,
   username,
   host,
+  nur,
   ...
+
 }:
 {
   # TODO: Move home-manager to its own file later
@@ -14,7 +16,14 @@
     useUserPackages = true;
     useGlobalPkgs = false;
     backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs username host; };
+    extraSpecialArgs = {
+      inherit
+        inputs
+        username
+        host
+        nur
+        ;
+    };
     users.${username} = {
       imports = [ ./../home ];
       home = {

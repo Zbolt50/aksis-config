@@ -26,9 +26,6 @@ in
     # Make toggleable
     ./communication
 
-    # Get rid of old dotfiles later
-    ./dotfiles.nix
-
     ./editors/neovim/neovim.nix
 
     # TODO: send programs to seperate folder to be sourced
@@ -43,12 +40,14 @@ in
     ./virtualization.nix
     ./mangohud.nix
     ./xdg.nix
+    ./dunst.nix
     # Music
     ./music
+    ./cava.nix
   ];
 
   home.packages = with pkgs; [
-    php
+    #php
   ];
 
 }

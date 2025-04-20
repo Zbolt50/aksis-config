@@ -53,11 +53,12 @@
     R # For PPL
     rstudio # For PPL
 
-    # Fun stuff
+    # Silly Terminal Stuff
     aseprite
     cowsay
     cmatrix
     pipes
+    sl
 
     # Communication/Email - will migrate to diff folder soon
     vesktop
@@ -71,10 +72,15 @@
 
     # CD/DVD Reading
     kdePackages.k3b
+    tagger
+    easytag
     #libsForQt5.k3b
 
     # Notes/Office
     obsidian
+
+    # Games/Fun
+    prismlauncher # for Minecraft
 
   ];
   # Testing this, might fix screen sharing

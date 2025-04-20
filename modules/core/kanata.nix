@@ -64,7 +64,7 @@
                 @escctrl @a @s @d @f @j @k @l @; @base
             )
             (deflayer base
-                _ a s d f j k l ; @hrm
+                caps a s d f j k l ; @hrm
             )
           '';
         };

@@ -10,6 +10,8 @@
     ];
     windowrulev2 = [
       "workspace special:discord, class:^(vesktop)$"
+      # Picture-in-Picture rules
+      "float, class:(firefox), title:(Picture-in-Picture)"
     ];
     windowrule = [
       "opacity 0.0 override, class:^(xwaylandvideobridge)$"
@@ -19,5 +21,10 @@
       "noblur, class:^(xwaylandvideobridge)$"
       "nofocus, class:^(xwaylandvideobridge)$"
     ];
+    # NOTE: This may screw with laptop screens, will check later
+    workspace = [
+      # TODO: Fix monitors to cast to certain displays
+    ];
+
   };
 }

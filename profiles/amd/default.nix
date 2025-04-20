@@ -1,4 +1,4 @@
-{ host, ... }:
+{ host, pkgs, ... }:
 # Graphics Drivers for AMD-GPU systems
 {
   imports = [
@@ -11,4 +11,8 @@
     enable = true;
     enable32Bit = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    rocmPackages.rocm-smi
+  ];
 }

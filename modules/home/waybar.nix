@@ -16,11 +16,13 @@ in
     enable = true;
     settings = [
       {
-        layer = "top";
         position = "top";
+        output = "DP-1";
+        #HDMI-A-1
         modules-left = [
           "hyprland/workspaces"
           "tray"
+          "mpd"
         ];
         modules-center = [
           "cpu"
@@ -44,9 +46,7 @@ in
             "battery"
           ]
           ++ [
-
             "clock"
-
           ];
         # Module Formatting
         "cpu" = {
@@ -162,8 +162,27 @@ in
           tooltip-format = "{:%m-%d-%Y}";
           timezone = "America/New_York";
         };
-        # Import .css from a folder of some kind, or nixifiy it to use stylix in some way
-        # Second option is more likely
+        "mpd" = {
+          format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} 󰽴 ";
+          format-disconnected = "Disconnected ";
+          format-stopped = "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped 󰽳 ";
+          interval = 2;
+          tooltip-format = "MPD (connected)";
+          tooltip-format-disconnected = "MPD (disconnected)";
+          state-icons = {
+            "paused" = "";
+            "playing" = "";
+          };
+          random-icons = {
+            "on" = " ";
+          };
+          repeat-icons = {
+            "on" = "󰑖 ";
+          };
+          single-icons = {
+            "on" = "󰑖 1 ";
+          };
+        };
       }
     ];
     style = ''
@@ -330,7 +349,7 @@ in
       tooltip {
         font-family: "JetBrainsMono Nerd Font";
         color: white;
-        background-color: #000000;
+        background-color: #101010;
         text-shadow: none;
         border-color : #800000;
       }
