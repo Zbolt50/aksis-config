@@ -17,7 +17,7 @@ in
     settings = [
       {
         position = "top";
-        output = "DP-1";
+        #output = "DP-1";
         #HDMI-A-1
         modules-left = [
           "hyprland/workspaces"
