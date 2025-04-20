@@ -41,6 +41,7 @@ in
     ./mangohud.nix
     ./xdg.nix
     ./dunst.nix
+    ./syncthing.nix
     # Music
     ./music
     ./cava.nix
