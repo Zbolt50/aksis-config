@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   # For when neovim breaks...
   programs.vim = {
@@ -8,6 +8,9 @@
       ignorecase = true;
       relativenumber = true;
     };
+    plugins = with pkgs; [
+      vimPlugins.gruvbox
+    ];
     extraConfig = ''
                   set hlsearch
                   set shiftwidth=4

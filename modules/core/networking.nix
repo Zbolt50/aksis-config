@@ -11,4 +11,8 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  networking.firewall = {
+    enable = true;
+  };
 }

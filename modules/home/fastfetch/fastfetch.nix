@@ -50,7 +50,8 @@
         "break"
         {
           type = "wm";
-          key = "WM ";
+          # Make this change depending on environment
+          key = " ";
           keyColor = "white";
           outputColor = "red";
         }

@@ -27,6 +27,7 @@ in
     ./communication
 
     ./editors/neovim/neovim.nix
+    ./editors/vim/vim.nix
 
     # TODO: send programs to seperate folder to be sourced
     ./git.nix
@@ -42,8 +43,11 @@ in
     ./xdg.nix
     ./dunst.nix
     ./syncthing.nix
+    ./yazi.nix
+
     # Music
     ./music
+    ./mpv.nix
     ./cava.nix
   ];
 

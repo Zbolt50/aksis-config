@@ -4,7 +4,7 @@
 {
   programs.ncmpcpp = {
     enable = true;
-    package = pkgs.ncmpcpp;
+    package = pkgs.ncmpcpp.override { visualizerSupport = true; };
 
     # Keybinds
     bindings = [
@@ -30,7 +30,7 @@
       }
       {
         key = "G";
-        command = "move_home";
+        command = "move_end";
       }
 
     ];

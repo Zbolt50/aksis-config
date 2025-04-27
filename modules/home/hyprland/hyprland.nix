@@ -44,6 +44,7 @@
         "XCURSOR_THEME,Bibata-Modern-Ice"
         "XCURSOR_SIZE,24"
         "EDITOR,nvim"
+        "TERMINAL, kitty"
 
       ];
 
@@ -71,16 +72,12 @@
     hyprland
     hyprcursor
     hyprpaper
+    hyprshot
+
     libnotify
     nwg-displays
     wl-clipboard
     hyprpolkitagent
 
-    # Add screenshot tool
-    hyprshot
-
-    # xwayland video bridge
-    # Might need this?
-    #kdePackages.xwaylandvideobridge
   ];
 }

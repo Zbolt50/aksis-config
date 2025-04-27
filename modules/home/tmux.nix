@@ -25,9 +25,9 @@
             set -as terminal-overrides ',xterm-256color:Tc:sitm=\E[3m'
 
             # Allow image support with kitty
-
             set -gq allow-passthrough on
             set -g visual-activity off
+
       		# Source Plugins
       		source-file ~/.config/tmux/plugins/vim-tmux-navigator.conf
       		# Fix prefix-highlight

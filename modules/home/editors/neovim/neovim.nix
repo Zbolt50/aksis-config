@@ -34,6 +34,7 @@
 
       # C/C++
       clang-tools
+      cmake-language-server
 
       # Python
       pyright

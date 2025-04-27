@@ -40,7 +40,7 @@
           '';
           config = ''
             (defsrc
-                caps a s d f j k l ; pause
+                caps a s d f j k l ; f12
             ) 
             (defvar
                 tap-time 250
@@ -57,8 +57,8 @@
                 k (multi (tap-hold $tap-time $hold-time k ralt))
                 l (multi (tap-hold $tap-time $hold-time l rctl))
                 ; (multi (tap-hold $tap-time $hold-time ; rsft))
-                base (tap-hold $tap-time $hold-time (layer-switch base) pause)
-                hrm (tap-hold $tap-time $hold-time (layer-switch default) pause)
+                base (tap-hold $tap-time $hold-time (layer-switch base) f12)
+                hrm (tap-hold $tap-time $hold-time (layer-switch default) f12)
             )
             (deflayer default 
                 @escctrl @a @s @d @f @j @k @l @; @base

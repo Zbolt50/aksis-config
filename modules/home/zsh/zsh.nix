@@ -9,7 +9,7 @@ let
 in
 {
   # bash but awesome
-  home.packages = with pkgs; [ thefuck ];
+  home.packages = with pkgs; [ ];
 
   home.file.".p10k.zsh" = {
     source = ./.p10k.zsh;
@@ -25,16 +25,20 @@ in
       enable = true;
       plugins = [
         "zsh-interactive-cd"
-        "git"
-        "git-auto-fetch"
-        "thefuck"
+        "fzf"
       ];
     };
     plugins = [
+      # Plugins that can't be handled by oh-my-zsh, might just remove oh-my-zsh later
       {
         name = "powerlevel10k";
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+      {
+        name = "fzf-tab";
+        src = pkgs.zsh-fzf-tab;
+        #file = "share/fzf-tab/fzf-tab.plugin.zsh";
       }
     ];
     shellAliases = {

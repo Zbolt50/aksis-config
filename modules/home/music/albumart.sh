@@ -1,6 +1,9 @@
 #!/bin/sh
 
 music_dir="$HOME/Music"
+if ! [ -f $XDG_CONFIG_HOME/ncmpcpp/previews ]; then
+    mkdir -p $XDG_CONFIG_HOME/ncmpcpp/previews  
+fi
 previewdir="$XDG_CONFIG_HOME/ncmpcpp/previews"
 filename="$(mpc --format "$music_dir"/%file% current)"
 previewname="$previewdir/$(mpc --format %album% current | base64).png"

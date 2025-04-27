@@ -29,4 +29,12 @@
     enable = true;
     package = pkgs.mpd-mpris;
   };
+  services.mpd-discord-rpc = {
+    enable = true;
+    package = pkgs.mpd-discord-rpc;
+    settings = {
+      details = "$title";
+      state = "$album - $artist";
+    };
+  };
 }

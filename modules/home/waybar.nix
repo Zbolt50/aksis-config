@@ -72,7 +72,12 @@ in
         "temperature" = {
           critical-threshold = 80;
           format = "{temperatureC}°C ";
-          format-critical = "{temperatureC}°C ";
+          format-critical = "{temperatureC}°C ";
+          hwmon-path = [
+            "/sys/class/hwmon/hwmon5/temp1_input"
+            "/sys/class/hwmon/hwmon6/temp1_input"
+            "/sys/class/thermal/thermal_zone0/temp"
+          ];
           tooltip = false;
         };
         "battery" = {
@@ -129,7 +134,7 @@ in
             default = [
               ""
               ""
-              ""
+              " "
             ];
           };
           on-click = "sleep 0.1 && pavucontrol";
@@ -163,7 +168,7 @@ in
           timezone = "America/New_York";
         };
         "mpd" = {
-          format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} 󰽴 ";
+          format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist:.15} - {album:.15} - {title:.25} 󰽴 ";
           format-disconnected = "Disconnected ";
           format-stopped = "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped 󰽳 ";
           interval = 2;
@@ -182,13 +187,12 @@ in
           single-icons = {
             "on" = "󰑖 1 ";
           };
+          on-click = "mpc toggle";
         };
       }
     ];
     style = ''
-          
       *{
-          /* `otf-font-awesome` is required to be installed for icons */
           font-size: 14px;
       }
       #waybar {
@@ -196,14 +200,12 @@ in
           font-size: 12px;
           opacity: 0.9;
       }
-
       #window {
           padding: 0 10px;
       }
       #waybar.modules-left{
           border-top: 2px solid #800000; 
       }
-
       window#waybar {
           border: none;
           box-shadow: none;

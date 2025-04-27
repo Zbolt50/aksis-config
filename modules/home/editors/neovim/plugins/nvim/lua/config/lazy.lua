@@ -81,3 +81,6 @@ vim.cmd("colorscheme siva")
 vim.g.nvim_tree_respect_buf_cwd = 1
 -- vimtex
 vim.g.vimtex_view_method = "zathura"
+
+-- LSP
+vim.diagnostic.config({ virtual_text = true })

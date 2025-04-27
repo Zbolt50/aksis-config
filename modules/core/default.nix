@@ -54,7 +54,6 @@
     rstudio # For PPL
 
     # Silly Terminal Stuff
-    aseprite
     cowsay
     cmatrix
     pipes
@@ -62,7 +61,6 @@
 
     # Communication/Email - will migrate to diff folder soon
     vesktop
-    thunderbird
     zoom-us
 
     # Switch Homebrew
@@ -72,12 +70,14 @@
 
     # CD/DVD Reading
     kdePackages.k3b
+
+    # Music tools
     tagger
     easytag
-    #libsForQt5.k3b
+    spotdl
 
     # Notes/Office
-    obsidian
+    obsidian # would really like to make a home-manager option for this and get that merged
 
     # Games/Fun
     prismlauncher # for Minecraft

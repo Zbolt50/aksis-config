@@ -5,6 +5,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 	},
+	-- 	lazy = true,
 	opts = {
 		---@type boolean
 		image_support = true,
