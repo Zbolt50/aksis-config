@@ -11,18 +11,32 @@ return {
 					c = { "clang-format" },
 					lua = { "stylua" },
 					python = { "black" },
-					javascript = { "prettier" },
-					typescript = { "prettier" },
-					css = { "prettier" },
-					html = { "prettier" },
-					php = { "prettier" },
+					-- Web Dev Hell
+					javascript = { "prettierd", "prettier" },
+					typescript = { "prettierd" },
+					css = { "prettierd" },
+					html = { "prettierd" },
+					php = { "php-cs-fixer" },
+				},
+				formatters = {
+					["php-cs-fixer"] = {
+						command = "php-cs-fixer",
+						args = {
+							"fix",
+							"$FILENAME",
+						},
+						stdin = false,
+					},
 				},
 				format_on_save = {
 					lsp_fallback = true,
 					async = false,
 					timeout_ms = 500,
 				},
+				notify_on_error = true,
 			})
+
+			-- Commands to disable/enable formatting
 			vim.api.nvim_create_user_command("FormatDisable", function(args)
 				if args.bang then
 					-- FormatDisable! will disable formatting just for this buffer

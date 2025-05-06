@@ -1,5 +1,6 @@
 require("config.keymaps")
 require("config.lazy")
+
 -- Updates highlight groups for italicized comments
 -- This will go in the new colorscheme setup later.
 local function update_hl(group, tbl)
@@ -25,3 +26,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+vim.api.nvim_set_option("cmdheight", 1)

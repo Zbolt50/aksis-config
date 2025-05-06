@@ -1,6 +1,7 @@
 local keymap = vim.keymap
 
 local defaults = { noremap = true, silent = true }
+
 -- VIM KEYMAPS
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
@@ -34,3 +35,15 @@ keymap.set("n", "<A-k>", ":resize -2<CR>", defaults)
 keymap.set("n", "<A-l>", ":vertical resize -2<CR>", defaults)
 -- Insert empty line without entering insert mode
 keymap.set("n", "<S-o>", ':<C-u>call append(line("."), repeat([""], v:count1))<CR>', defaults)
+
+keymap.set("n", "<leader>hi", function()
+	vim.cmd([[echo synIDattr(synID(line('.'), col('.'), 1), 'name')]])
+end, { noremap = true, silent = true })
+
+keymap.set("n", "<leader>d", function()
+	vim.diagnostic.open_float()
+end, defaults)
+
+keymap.set("n", "<leader>d", function()
+	vim.lsp.buf.code_action()
+end, defaults)
