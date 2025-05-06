@@ -27,6 +27,8 @@
         "--expose-wayland"
       ];
     };
-
+    environment.systemPackages = with pkgs; [
+      mangohud
+    ];
   };
 }

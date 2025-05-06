@@ -45,6 +45,7 @@
     # Files/Archiving
     zip
     unzip
+    file-roller
 
     # Other stuff
     ripgrep
@@ -68,6 +69,9 @@
     fusee-launcher
     fusee-interfacee-tk
 
+    # Images
+    nomacs
+
     # CD/DVD Reading
     kdePackages.k3b
 
@@ -81,6 +85,12 @@
 
     # Games/Fun
     prismlauncher # for Minecraft
+
+    # Misc
+    xdg-desktop-portal
+
+    # NUR PKGS
+    #nur.repos.mic92.hello-nur
 
   ];
   # Testing this, might fix screen sharing

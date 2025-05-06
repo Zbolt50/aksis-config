@@ -1,44 +1,5 @@
 {
   "nodes": {
-    "firefox-addons": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "pkgs/firefox-addons",
-        "lastModified": 1745352740,
-        "narHash": "sha256-Dn04Q/170ilpkt1yCGEtO7l5Y8i+lqnWbarU/bcCMAU=",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "rev": "c90dea4fdf80a5bacc062828630b8b15bcc266da",
-        "type": "gitlab"
-      },
-      "original": {
-        "dir": "pkgs/firefox-addons",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "type": "gitlab"
-      }
-    },
-    "flake-parts": {
-      "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib"
-      },
-      "locked": {
-        "lastModified": 1712014858,
-        "narHash": "sha256-sB4SWl2lX95bExY2gMFG5HIzvva5AVMJd4Igm+GpZNw=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "9126214d0a59633752a136528f5f3b9aa8565b7d",
-        "type": "github"
-      },
-      "original": {
-        "id": "flake-parts",
-        "type": "indirect"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -91,52 +52,11 @@
         "type": "github"
       }
     },
-    "nixpkgs-lib": {
-      "locked": {
-        "dir": "lib",
-        "lastModified": 1711703276,
-        "narHash": "sha256-iMUFArF0WCatKK6RzfUJknjem0H9m4KgorO/p3Dopkk=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "d8fe5e6c92d0d190646fb9f1056741a229980089",
-        "type": "github"
-      },
-      "original": {
-        "dir": "lib",
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixtendo-switch": {
-      "inputs": {
-        "flake-parts": "flake-parts",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1721329381,
-        "narHash": "sha256-oj95wOUYXXlpx87Fjmf+Nu+wz1qrFtCf7AKDnxEB8oQ=",
-        "owner": "nyawox",
-        "repo": "nixtendo-switch",
-        "rev": "ba69506f44d4e154cdf11b5ba3d23534f9fb3238",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nyawox",
-        "repo": "nixtendo-switch",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
-        "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs",
-        "nixtendo-switch": "nixtendo-switch"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

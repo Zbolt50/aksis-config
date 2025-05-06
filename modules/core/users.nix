@@ -3,7 +3,6 @@
   inputs,
   username,
   host,
-  nur,
   ...
 
 }:
@@ -21,11 +20,13 @@
         inputs
         username
         host
-        nur
         ;
     };
     users.${username} = {
-      imports = [ ./../home ];
+      imports = [
+        ./../home
+        #inputs.nur.modules.homeManager.default
+      ];
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";

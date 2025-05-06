@@ -1,4 +1,4 @@
-{ username, ... }:
+{ username, pkgs, ... }:
 {
   # System Defaults that will never change
   system.stateVersion = "24.11";
@@ -27,7 +27,7 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than-7d";
+    options = "--delete-older-than 7d";
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -44,4 +44,12 @@
       chown ${username}:users /home/${username}/Vaults
     fi
   '';
+  # xdg-testing
+  # Register kitty as the default terminal
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # or -gnome/-kde depending on DE
+    config.common.default = "*";
+    config.hyprland.default = "gtk"; # Or your appropriate backend
+  };
 }
