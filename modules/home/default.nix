@@ -39,7 +39,6 @@ in
     ./zathura.nix
     ./gtk/gtk.nix
     ./virtualization.nix
-    ./mangohud.nix
     ./xdg.nix
     ./dunst.nix
     ./syncthing.nix
@@ -53,6 +52,7 @@ in
 
   home.packages = with pkgs; [
     #php
+    lynx
   ];
 
 }

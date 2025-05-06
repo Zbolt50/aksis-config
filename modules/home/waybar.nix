@@ -7,6 +7,7 @@
 # specify waybar to output certain bars to certain places on connect/detection
 # One issue might be waybar needing updated upon monitor connect, but we will see, this might be handled with a script
 # Another idea- if thinkpad- enable second battery module
+
 let
   hostVars = import ../../hosts/${host}/variables.nix;
   inherit (hostVars) terminal;
@@ -188,6 +189,8 @@ in
             "on" = "󰑖 1 ";
           };
           on-click = "mpc toggle";
+          on-scroll-up = "mpc next";
+          on-scroll-down = "mpc prev";
         };
       }
     ];

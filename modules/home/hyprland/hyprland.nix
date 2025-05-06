@@ -16,25 +16,25 @@
 
     settings = {
       exec-once = [
-        #"hyprpaper"
         "waybar"
         "dunst"
-        "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP"
+        "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP"
+        "systemctl --user restart xdg-desktop-portal.service"
         "systemctl --user start hyprpolkitagent"
         # Move later
         "hyprctl setcursor Bibata-Modern-Ice 24"
       ];
 
       env = [
-        "NIXOS_OZONE_1L, 1"
-        "NIXPKGS_ALLOW_UNFREE, 1"
-        "XDG_CURRENT_DESKTOP, Hyprland"
+        "NIXOS_OZONE_1L,1"
+        "NIXPKGS_ALLOW_UNFREE,1"
+        "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "GDK_BACKEND, wayland, x11"
-        "CLUTTER_BACKEND, wayland"
-        "SDL_VIDEODRIVER, x11"
+        "GDK_BACKEND,wayland,x11"
+        "CLUTTER_BACKEND,wayland"
+        "SDL_VIDEODRIVER,x11"
         "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
 
         # Make this source this from somewhere else later for

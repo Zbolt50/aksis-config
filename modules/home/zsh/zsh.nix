@@ -3,14 +3,13 @@
   host,
   ...
 }:
-let
-  hostVars = import ../../../hosts/${host}/variables.nix;
-  inherit (hostVars) terminal;
-in
 {
   # bash but awesome
-  home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [
+    zsh-fzf-tab
+  ];
 
+  # Source p10k theme
   home.file.".p10k.zsh" = {
     source = ./.p10k.zsh;
   };
@@ -38,7 +37,7 @@ in
       {
         name = "fzf-tab";
         src = pkgs.zsh-fzf-tab;
-        #file = "share/fzf-tab/fzf-tab.plugin.zsh";
+        file = "share/fzf-tab/fzf-tab.plugin.zsh";
       }
     ];
     shellAliases = {
@@ -63,6 +62,7 @@ in
       gf = "git fetch";
       gM = "git merge";
       gc = "git commit";
+      gd = "git diff";
 
       # Kitty- might add if/else so these dont show up in other terminals
       icat = "kitten icat";

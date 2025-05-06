@@ -2,7 +2,7 @@
 {
   # For when neovim breaks...
   programs.vim = {
-    enable = true;
+    enable = false;
     defaultEditor = false;
     settings = {
       ignorecase = true;
