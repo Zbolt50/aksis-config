@@ -65,13 +65,38 @@
           source ~/.config/neomutt/bindings
         '';
       };
+
+      # TODO: Fix imapnotify
+
+      imapnotify = {
+        enable = true;
+        boxes = [
+          "INBOX"
+        ];
+        extraArgs = [
+          "-wait 1"
+        ];
+        onNotify = "mbsync personal";
+        onNotifyPost = {
+          mail = "\${pkgs.libnotify}/bin/notify-send 'New Mail has arrived'";
+        };
+      };
     };
+    # Add more accounts here
+
   };
 
+  # Find a way to make this recursive
   home.file.".config/neomutt/colors".source =
     config.lib.file.mkOutOfStoreSymlink "/home/${username}/aksis-config/modules/home/communication/neomutt/colors";
   home.file.".config/neomutt/settings".source =
     config.lib.file.mkOutOfStoreSymlink "/home/${username}/aksis-config/modules/home/communication/neomutt/settings";
   home.file.".config/neomutt/bindings".source =
     config.lib.file.mkOutOfStoreSymlink "/home/${username}/aksis-config/modules/home/communication/neomutt/bindings";
+  home.file.".config/neomutt/mailcap".source =
+    config.lib.file.mkOutOfStoreSymlink "/home/${username}/aksis-config/modules/home/communication/neomutt/mailcap";
+
+  home.packages = [
+    pkgs.imapnotify
+  ];
 }

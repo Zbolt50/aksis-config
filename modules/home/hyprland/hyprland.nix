@@ -1,5 +1,6 @@
 {
   pkgs,
+  username,
   ...
 }:
 # Hyprland
@@ -44,7 +45,8 @@
         "XCURSOR_THEME,Bibata-Modern-Ice"
         "XCURSOR_SIZE,24"
         "EDITOR,nvim"
-        "TERMINAL, kitty"
+        "TERMINAL,kitty"
+        "HYPRSHOT_DIR,/home/${username}/Pictures/Screenshots"
 
       ];
 

@@ -1,0 +1,12 @@
+# vim: filetype=muttrc
+
+# HTML
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/plain; nvim %s
+
+# PDFs
+application/pdf; zathura %s 
+
+image/png nomacs %s
+image/jpeg nomacs %s
+# Add support for word docs through libre office

@@ -107,4 +107,12 @@ in
     ];
   };
 
+  # Sets neovim as default man-page reader
+  #export MANPAGER='nvim +Man!'
+  #export MANWIDTH=999
+  home.sessionVariables = {
+    MANPAGER = "nvim +Man!";
+    MANWIDTH = 999;
+  };
+
 }

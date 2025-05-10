@@ -82,6 +82,7 @@
 
     # Notes/Office
     obsidian # would really like to make a home-manager option for this and get that merged
+    libreoffice-still # See if theres a lighter package for this later down the line
 
     # Games/Fun
     prismlauncher # for Minecraft
@@ -89,8 +90,9 @@
     # Misc
     xdg-desktop-portal
 
-    # NUR PKGS
-    #nur.repos.mic92.hello-nur
+    # Man pages
+    man-pages
+    man-pages-posix
 
   ];
   # Testing this, might fix screen sharing

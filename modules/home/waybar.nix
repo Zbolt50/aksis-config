@@ -169,7 +169,7 @@ in
           timezone = "America/New_York";
         };
         "mpd" = {
-          format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist:.15} - {album:.15} - {title:.25} 󰽴 ";
+          format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title:.30} 󰽴 ";
           format-disconnected = "Disconnected ";
           format-stopped = "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped 󰽳 ";
           interval = 2;
@@ -191,6 +191,10 @@ in
           on-click = "mpc toggle";
           on-scroll-up = "mpc next";
           on-scroll-down = "mpc prev";
+        };
+        "hyprland-workspaces" = {
+          show-special = true;
+          special-visible-only = true;
         };
       }
     ];

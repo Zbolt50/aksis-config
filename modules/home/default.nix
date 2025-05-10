@@ -43,6 +43,7 @@ in
     ./dunst.nix
     ./syncthing.nix
     ./yazi.nix
+    ./man.nix
 
     # Music
     ./music

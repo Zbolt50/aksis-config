@@ -29,9 +29,11 @@
     enable = true;
     package = pkgs.mpd-mpris;
   };
-  services.mpd-discord-rpc = {
+  services.mpdris2 = {
     enable = true;
-    package = pkgs.mpd-discord-rpc;
+  };
+  services.mpd-discord-rpc = {
+    enable = false;
     settings = {
       details = "$title";
       state = "$album - $artist";
